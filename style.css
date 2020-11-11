@@ -10,6 +10,7 @@
 body
 {
 	font-family: 'Raleway', sans-serif;
+	margin: 0px;
 }
 
 form
@@ -239,10 +240,10 @@ nav a
 nav a:hover
 {
     color: #0065FC;
-    border-top: 1px solid #0065FC;
+    border-top: 2px solid #0065FC;
 }
 
-.section_grise
+.section_hebe
 {
 	background-color: #F2F2F2;
 	border-radius: 20px;
@@ -252,7 +253,22 @@ nav a:hover
     margin-bottom: 30px;
 }
 
-.section_grise > h2
+.section_hebe > h2
+{
+	margin: 0;
+}
+
+.section_aside
+{
+	background-color: #F2F2F2;
+	border-radius: 20px;
+	padding: 30px;
+	color: black;
+    font-size: 1em;
+    margin-bottom: 30px;
+}
+
+.section_aside > h2
 {
 	margin: 0;
 }
@@ -272,7 +288,7 @@ aside
 	margin-left: 30px;
 }
 
-section
+section, #H_A
 {
 	display: flex;
 }
@@ -288,7 +304,6 @@ section
 
 #aside > div > img
 {
-	height: 200px;
 	border-radius: 20px 0 0 20px;
 	object-fit: cover;
 	width: 30%;
@@ -512,19 +527,19 @@ article
 
 /*Footer*/
 
-#fin
+.Fin
 {
     display: flex;
-    padding-top: 25px;
+    padding: 30px;
     background-color: #F2F2F2
 }
 
-#fin > p
+.Fin > p
 {
 	font-size: 0.8em;
 }
 
-#fin > h4
+.Fin > h4
 {
     font-size: 1.1em;
 }
@@ -547,6 +562,126 @@ article
 
 
 
-
-
 /* Breakspoints */
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px)
+{
+	/*Body*/
+
+	body
+	{
+		width: fit-content;
+	}
+
+	/*Filtes*/
+
+	.FilterTitle
+	{
+		width: 100%;
+	}
+
+	/*Hébergement*/
+
+	article
+	{
+		margin-right: 0px;
+	}
+
+	.section_hebe
+	{
+		background-color: white;
+		margin-bottom: 0px;
+		padding: 0px;
+	}
+
+	#hebergements > div
+	{
+		width: -webkit-fill-available;
+	}
+
+	/*Aside*/
+
+	.section_aside
+	{
+		border-radius: unset;
+	}
+
+	/*Section Hebergements & Aside*/
+
+	section, #H_A
+	{
+		display: flex;
+		flex-direction: column-reverse;
+		width: fit-content;
+	}
+
+	/*Activités*/
+
+	.Activitercape
+	{
+		display: block;
+	}
+
+	.ActiviterCarteFigc
+	{
+		font-size: 0.9rem;
+		margin-left: 20px;
+	}
+
+	/*Footer*/
+
+	.Fin
+	{
+		display: block;
+    	padding: 30px;
+    	background-color: #F2F2F2;
+	}
+
+	.Fin > div > h4
+	{
+	    font-size: 1.2em;
+	}
+
+	#A_propos
+	{
+		width: auto;
+		padding-bottom: 20px;		
+	}
+
+	#Nos_Hébergements
+	{
+		width: auto;
+		padding-bottom: 20px;
+	}
+
+	#Assistance
+	{
+		width: auto;
+		padding-bottom: 20px;
+	}
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px)
+{
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px)
+{
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px)
+{
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px)
+{
+
+}
