@@ -31,7 +31,7 @@ form
 #Bouton
 {
     background-color: #0065FC;
-    border: 1px solid #0065FC;
+    border: 1px solid;
     border-radius: 0px 15px 15px 0px;
     font-size: 1.2em;
     padding: 10px;
@@ -44,6 +44,12 @@ form
 	background-color: #F2F2F2;
     display: flex;
     border-radius: 15px;
+}
+
+.loupe
+{
+	color: white;
+	font-size: 0px;
 }
 
 #Ville
@@ -64,6 +70,43 @@ form
 #Logo_Reservia img
 {
     height: 50px;
+}
+
+/* Navigation */
+
+#inscrire
+{
+	color: #0065FC;
+}
+
+#top
+{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+#menu > li
+{
+    margin-right: 15px;
+    margin-top: 4px;
+}
+
+nav a
+{
+    font-size: 0.9em;
+    color: black;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-decoration: none;
+}
+
+nav a:hover
+{
+    color: #0065FC;
+    border-top: 2px solid #0065FC;
 }
 
 /* Filtres */
@@ -206,42 +249,6 @@ header
 	margin-right: 10px;
 }
 
-/* Navigation */
-
-#inscrire
-{
-	color: #0065FC;
-}
-
-#top
-{
-    list-style-type: none;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-}
-
-#menu > li
-{
-    margin-right: 15px;
-    margin-top: 4px;
-}
-
-nav a
-{
-    font-size: 0.9em;
-    color: black;
-    padding-top: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
-    text-decoration: none;
-}
-
-nav a:hover
-{
-    color: #0065FC;
-    border-top: 2px solid #0065FC;
-}
 
 .section_hebe
 {
@@ -347,8 +354,8 @@ article
     display: flex;
     margin-right: 30px;
     flex-direction: column;
-    
 }
+
 /*Commun*/
 
 .marge
@@ -368,7 +375,6 @@ article
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
-	align-items: center;
 }
 
 #hebergements > div
@@ -560,8 +566,6 @@ article
 }
 
 
-
-
 /* Breakspoints */
 
 /* Extra small devices (phones, 600px and down) */
@@ -572,6 +576,31 @@ article
 	body
 	{
 		width: fit-content;
+	}
+
+	/*Forms*/
+
+	#Bouton
+	{
+	    border-radius: 15px 15px 15px 15px;
+	}
+
+	#recherche
+	{
+		background-color: #F2F2F2;
+	    display: flex;
+	    border-radius: 15px;
+	}
+
+	.loupe
+	{
+		color: white;
+		font-size: inherit;
+	}
+
+	#search
+	{
+		display: none;
 	}
 
 	/*Filtes*/
@@ -665,7 +694,45 @@ article
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px)
 {
+	/*Hébergement*/
 
+	article
+	{
+		margin-right: 0px;
+	}
+
+	.section_hebe
+	{
+		background-color: white;
+		margin-bottom: 0px;
+		padding: 0px;
+	}
+
+	#hebergements > div
+	{
+		width: 40%;
+	}
+
+	/*Aside*/
+
+	.section_aside
+	{
+		border-radius: unset;
+	}
+
+	#aside > div
+	{
+		max-height: 200px;
+	}
+
+	/*Section Hebergements & Aside*/
+
+	section, #H_A
+	{
+		display: flex;
+		flex-direction: column-reverse;
+		width: fit-content;
+	}
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
@@ -677,7 +744,40 @@ article
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px)
 {
+	/*Hébergement*/
 
+	article
+	{
+	    display: flex;
+	    margin-right: 30px;
+	    flex-direction: column;
+	}
+
+	.section_hebe
+	{
+		background-color: #F2F2F2;
+		padding: 30px;
+	}
+	
+	#hebergements > div
+	{
+		width: 30%;
+	}
+	
+	/*Aside*/
+
+	.section_aside
+	{
+		border-radius: 20px;
+	}
+
+	/*Section Hebergements & Aside*/
+
+	section, #H_A
+	{
+		display: flex;
+		flex-direction: row;
+	}
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
