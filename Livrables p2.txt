@@ -1,0 +1,5 @@
+Livrables Projet 2 "Reservia"
+
+Site : https://kln-vnls.github.io/Reservia/Reservia.html
+
+Git : https://github.com/Kln-Vnls/Reservia

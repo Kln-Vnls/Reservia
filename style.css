@@ -1,10 +1,7 @@
 @font-face 
 {
 	font-family: 'Raleway';
-		src: url('Raleway.eot') format('eot'),
-			 url('Raleway.woff') format('woff'),
-			 url('Raleway.ttf') format('truetype'),
-			 url('Raleway.svg') format('svg');
+		src: url('fonts/Raleway/static/Raleway-Medium.ttf') format('truetype');
 }
 
 body
@@ -67,9 +64,26 @@ form
 	height: 18px;
 }
 
+#Logo_Reservia
+{
+	display: flex;
+	align-items: center;
+    margin-top: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
 #Logo_Reservia img
 {
     height: 50px;
+}
+
+#Logo_Reservia a
+{
+	color: #0065FC;
+	font-weight: bold;
+	margin-left: auto;
+	text-decoration: none;
 }
 
 /* Navigation */
@@ -85,17 +99,11 @@ form
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-}
-
-#menu > li
-{
-    margin-right: 15px;
-    margin-top: 4px;
+    padding-inline-start: 0px;
 }
 
 nav a
 {
-    font-size: 0.9em;
     color: black;
     padding-top: 20px;
     padding-left: 20px;
@@ -106,7 +114,6 @@ nav a
 nav a:hover
 {
     color: #0065FC;
-    border-top: 2px solid #0065FC;
 }
 
 /* Filtres */
@@ -257,7 +264,6 @@ header
 	padding: 30px;
 	color: black;
     font-size: 1em;
-    margin-bottom: 30px;
 }
 
 .section_hebe > h2
@@ -272,7 +278,6 @@ header
 	padding: 30px;
 	color: black;
     font-size: 1em;
-    margin-bottom: 30px;
 }
 
 .section_aside > h2
@@ -289,12 +294,6 @@ aside
     position: relative; 
 }
 
-#contenu
-{
-	margin-right: 30px;
-	margin-left: 30px;
-}
-
 section, #H_A
 {
 	display: flex;
@@ -309,14 +308,14 @@ section, #H_A
 	flex-direction: column;
 }
 
-#aside > div > img
+#aside > a > img
 {
 	border-radius: 20px 0 0 20px;
 	object-fit: cover;
 	width: 30%;
 }
 
-#aside > div
+#aside > a
 {
 	display: flex;
 	flex-direction: row;
@@ -325,11 +324,12 @@ section, #H_A
 	padding: 6px;
 	box-shadow: 0 0 18px 1px #00000026;
 	margin-top: 30px;
-	width: 100%;
+	text-decoration: none;
+	color: black;
 }
 
-#aside > div > div > h3,
-#aside > div > div > p
+#aside > a > div > h3,
+#aside > a > div > p
 {
 	margin: unset;
     margin-top: 10px;
@@ -343,9 +343,9 @@ section, #H_A
 	font-size: 25px;
 }
 
-#aside > div > div > i
+#aside > a > div > i
 {
-	margin-top: 125px;
+	margin-top: 105px;
 	color: #0065FC;
 }
 
@@ -377,7 +377,7 @@ article
 	justify-content: space-between;
 }
 
-#hebergements > div
+#hebergements > a
 {
 	width: 30%;
 	display: flex;
@@ -387,24 +387,26 @@ article
 	padding: 6px;
 	box-shadow: 0 0 18px 1px #00000026;
 	margin-top: 30px;
+	text-decoration: none;
+	color: black;
 }
 
-#hebergements > div > img
+#hebergements > a > img
 {
 	height: 200px;
 	border-radius: 20px 20px 0 0;
 	object-fit: cover;
 }
 
-#hebergements > div > div > h3,
-#hebergements > div > div > p
+#hebergements > a > div > h3,
+#hebergements > a > div > p
 {
 	margin: unset;
     margin-top: 10px;
     margin-left: 20px;
 }
 
-#hebergements > div > div > i
+#hebergements > a > div > i
 {
 	margin-top: 10px;
 	color: #0065FC;
@@ -460,7 +462,7 @@ article
 	flex: 1;
 }
 
-.Activitercape
+.Activitercape > a
 {
 	text-decoration: none;
 	color: inherit;
@@ -493,12 +495,6 @@ article
 .ActiviterCarteFigc
 {
     height: 3.4rem;
-}
-
-:target
-{
-    padding-top: 7.19rem;
-    margin-top: -7.19rem;
 }
 
 .Port
@@ -578,6 +574,43 @@ article
 		width: fit-content;
 	}
 
+	header
+	{
+		flex-direction: column;
+	}
+
+	#menu a
+	{
+		padding: 0;
+	    padding-bottom: 10px;
+	    padding-top: 10px;
+	    border-bottom: 3px solid #F2F2F2;
+	    font-size: 1.1rem;
+	    width: 100%;
+	    display: block;
+	}
+
+	#menu a:active
+	{
+		border-bottom: 3px solid #0065FC;
+	}
+
+	#menu li
+	{
+	    text-align: center;
+		width: 50%;
+	}
+
+	#menu li:nth-child(3)
+	{
+		display: none;
+	}
+
+	nav a: hover
+	{
+		border-top: 0px;
+	}
+
 	/*Forms*/
 
 	#Bouton
@@ -610,6 +643,12 @@ article
 		width: 100%;
 	}
 
+	#section1
+	{
+		margin-right: 15px;
+		margin-left: 15px;
+	}
+
 	/*Hébergement*/
 
 	article
@@ -621,10 +660,15 @@ article
 	{
 		background-color: white;
 		margin-bottom: 0px;
-		padding: 0px;
+		padding: 15px;
 	}
 
-	#hebergements > div
+	.section_hebe > h2
+	{
+		padding-top: 30px;
+	}
+
+	#hebergements > a
 	{
 		width: -webkit-fill-available;
 	}
@@ -656,6 +700,12 @@ article
 	{
 		font-size: 0.9rem;
 		margin-left: 20px;
+	}
+
+	.Activiter
+	{
+		padding-left: 15px;
+		padding-right: 15px;
 	}
 
 	/*Footer*/
@@ -694,6 +744,27 @@ article
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px)
 {
+
+	#Logo_Reservia
+	{
+		margin-left: 0px;
+	}
+
+	#Logo_Reservia a
+	{
+		display: none;
+	}
+
+	nav a
+	{
+		padding-top: 13px;
+	}
+
+	nav a:hover
+	{
+		border-top: 3px solid #0065FC;
+	}
+
 	/*Hébergement*/
 
 	article
@@ -705,10 +776,15 @@ article
 	{
 		background-color: white;
 		margin-bottom: 0px;
-		padding: 0px;
+		padding: 30px;
 	}
 
-	#hebergements > div
+	.section_hebe > h2
+	{
+		padding-top: 0px;
+	}
+
+	#hebergements > a
 	{
 		width: 40%;
 	}
@@ -720,7 +796,7 @@ article
 		border-radius: unset;
 	}
 
-	#aside > div
+	#aside > a
 	{
 		max-height: 200px;
 	}
@@ -733,6 +809,12 @@ article
 		flex-direction: column-reverse;
 		width: fit-content;
 	}
+
+	#contenu
+	{
+		padding-right: 30px;
+		padding-left: 30px;
+	}
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
@@ -744,6 +826,7 @@ article
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px)
 {
+
 	/*Hébergement*/
 
 	article
@@ -759,7 +842,7 @@ article
 		padding: 30px;
 	}
 	
-	#hebergements > div
+	#hebergements > a
 	{
 		width: 30%;
 	}
