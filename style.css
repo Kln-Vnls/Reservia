@@ -301,7 +301,6 @@ section, #H_A
 
 #aside
 {
-	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-around;
 	align-items: center;
@@ -312,7 +311,7 @@ section, #H_A
 {
 	border-radius: 20px 0 0 20px;
 	object-fit: cover;
-	width: 30%;
+	width: 40%;
 }
 
 #aside > a
